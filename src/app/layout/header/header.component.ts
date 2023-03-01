@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Document} from "postcss";
 
 @Component({
   selector: 'app-header',
@@ -9,9 +8,11 @@ import {Document} from "postcss";
 export class HeaderComponent implements OnInit {
   value?: Date;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit(): void {
+  }
+
+  ngOnInit() {
   }
 
 }
