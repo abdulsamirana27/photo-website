@@ -4,8 +4,18 @@ import {LayoutComponent} from "./layout.component";
 
 const routes: Routes = [
   {
-    path: '',
-  component:LayoutComponent}
+    path: '',redirectTo:'home'
+  },
+  {
+    path:'',
+    component:LayoutComponent,
+    children:[
+      {
+        path: 'home',
+        loadChildren: () => import('src/app/modules/home/home.module').then(m => m.HomeModule)
+      }
+    ]
+  }
 ];
 
 @NgModule({
